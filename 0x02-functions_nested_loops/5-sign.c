@@ -3,7 +3,7 @@
 /**
  * print-sign -function to check for a sign a number
  * @n: is the int that will be used for the argument of the function
- * Return: 0
+ * Return:1 prints '+' if n > 0, 0 prints '0' if n = 0, -1 prints '-' if n < 0
  */
 int print_sign(int n)
 {
