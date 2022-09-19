@@ -1,49 +1,38 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0.
+ * main - finds and prints the 98 Fibonacci numbers,
+ * starting with 1 and 2
+ * followed by new line
+ * Return: Always 0 (Success).
  */
 int main(void)
 {
-	int fibNum;
-	unsigned long fibOne = 0, fibTwo = 1, allSum;
-	unsigned long fibOne_halfOne, fibOne_halfTwo, fibTwo_halfOne, fibTwo_halfTwo;
-	unsigned long halfOne, halfTwo;
+	unsigned long int i, j, k, j1, j2, k1, k2;
 
-	for (fibNum = 0; fibNum < 92; fibNum++)
-	{
-		allSum = fibOne + fibTwo;
-		printf("%lu, ", allSum);
+	j = 1;
+	k = 2;
 
-		fibOne = fibTwo;
-		fibTwo = allsum;
-	}
-	fibOne_halfOne = fibOne / 10000000000;
-	fibTwo_halfOne = fibTwo / 10000000000;
-	fibOne_halfTwo = fibOne % 10000000000;
-	fibTwo_halfTwo = fibTwo % 10000000000;
+	printf("%lu", k);
+	k = k + j;
+	j = k - j;
+}
+j1 = j / 10000000000;
+j2 = j % 10000000000;
+k1 = k / 10000000000;
+k2 = k % 10000000000;
 
-	for (fibNum = 93; fibNum < 99; fibNum++)
-	{
-		halfOne = fibOne_halfOne + fibTwo_halfOne;
-		halfTwo = fibOne_halfTwo + fibTwo_halfTwo;
-		if (fibOne_halfTwo + fibTwo_halfTwo > 9999999999)
-		{
-			halfOne += 1;
-			halfTwo %= 10000000000;
-		}
-		printf("%lu%lu", halfOne, halfTwo);
-		if (fibNum != 98)
-		{
-			printf(", ");
-		}
-		fibOne_halfOne = fibTwo_halfOne;
-		fibOne_halfTwo = fibTwo_halfTwo;
-		fibTwo_halfOne = fibTwo_halfOne;
-		fibTwo_halfTwo = fibTwo_halfTwo;
-	}
-	printf("\n");
-	return (0);
+for (i = 92; i < 99; ++i)
+{
+	printf(", %lu", k1 + (k2 / 10000000000));
+	printf(",%lu", k2 % 10000000000);
+	k1 = k1 + j1;
+	j1 = k1 - j1;
+	k2 = k2 + j2;
+	j2 = k2 + j2;
+}
+
+printf("\n");
+
+return (0);
 }
