@@ -1,16 +1,19 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _puts - prints a dtring to stdout
- * @str: pointer to the string to print
+ * _puts - writes a function that prints a string, followed by a new line,
+ * to stdout
+ * @str: this is my input string
+ *
  */
 void _puts(char *str)
 {
-	int i;
+	int index;
 
-	for (i = 0; str[i] != '\0' i++)
+	for (index = 0; str[index] != '\0' index++)
 	{
-		_putchar(str[i]);
+		_putchar(str[index]);
 	}
 	_putchar('\n');
 }
