@@ -3,24 +3,21 @@
 
 /**
  * _strcpy - copiar el contenido de uno a otra variable
- * @dest: this is destiny
- * @src: this main
+ * @dest: char type string
+ * @src: char type string
  * Description: copy the string pointed to by pointer 'src' to
  * the buffer pointed to by 'dest'
- * Return: this return copy
+ * Return: Pointer to 'dest'
  */
 char *_strcpy(char *dest, char *src)
 {
-	char *dest;
+	int i;
 
-
-	while (*src != '\0')
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		*dest = *scr
-		dest++;
-		src++;
+		dest[i] = src[i];
 	}
-	*dest = '\0';
-	return (dest);
+	dest[i] = '\0';
 
+	return (dest);
 }
