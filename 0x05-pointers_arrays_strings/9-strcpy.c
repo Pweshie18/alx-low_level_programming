@@ -1,22 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strcpy - see description
- * @dest: char type string
- * @src: char type string
- * Description: copy the string pointed to by the pointer 'src' to
+ * _strcpy - copiar el contenido de uno a otra variable
+ * @dest: this is destiny
+ * @src: this main
+ * Description: copy the string pointed to by pointer 'src' to
  * the buffer pointed to by 'dest'
- * Return: pointer to 'dest'
+ * Return: this return copy
  */
-char *_strpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
-	int i;
+	char *start = dest;
 
-	for (i = 0; src[i] != '\0'; i++)
+
+	while (*src != '\0')
 	{
-		dest[i] = src[i];
+		*dest = *scr;
+		dest++;
+		src++;
 	}
-	dest[i] = '\0';
-
-	return (dest);
+	*dest = '\0'
+	return (start);
 }
