@@ -4,14 +4,14 @@
 /**
  * main - prints the addition of positive numbers,
  * followed by a new line.
- * @argc: the number ofarguments passed to the program.
+ * @argc: the number of arguments passed to the program.
  * @argv: an array of pointers to the arguments.
  *
  * Return: if one of the numbers contains symbols that are non-digits - 1,
  * otherwise - 0
  */
 
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
 
 	int num, digit, sum = 0;
