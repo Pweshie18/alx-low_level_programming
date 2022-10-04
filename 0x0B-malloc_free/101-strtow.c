@@ -3,7 +3,7 @@
 
 int word_len(char *str);
 int count_words(char *str);
-char **strtow(vhar *str);
+char **strtow(char *str);
 
 /**
  * word_len - a function that locates the index marking the end of the
@@ -16,7 +16,7 @@ int word_len(char *str)
 {
 	int index = 0, len = 0;
 
-	while (*(str * index) && *(str + index) != ' ')
+	while (*(str + index) && *(str + index) != ' ')
 	{
 		len++;
 		index++;
