@@ -4,44 +4,54 @@
 
 /**
  * print_all - a function that prints anything followed by a new line.
- * @format: char type pointer to string
+ * @format: a list of types of arguments passed to the function.
  *
  * Description: a function that has two parameters
- * Return: na
+ * Return: no return
  */
 void print_all(const char * const format, ...)
 {
-	int j;
+	va_list valist;
+	unsigned int i = 0, j, c = 0;
 	char *str;
-	char *space;
-	va_list ap;
+	const char t_arg[] = "cifs";
 
-	va_start(ap, format);
-	j = 0;
-	while (format && format[j])
-	{
-		space = "";
-		if (format[j + 1])
-			space = ", ";
-		switch (format[j])
-		{
-			case 'c';
-			printf("%c%s", va_arg(ap, int), space);
-			break;
-			case 'i';
-			printf("%d%s", va_arg(ap, int), space);
-			break;
-			case 'f';
-			printf("%f%s", va_arg(ap, double), space);
-			break;
-			case 's';
-			str = va_arg(ap, char *);
-			if (!str || !*str)
-				str = "(nil)";
-			printf("%s%s", str, space);
-			break;
-		}
-		j++;
-	}
+	va_start(valist, format);
+	while (format && format[i])
+{
+		j = 0;
+	while (t_arg[j])
+{
+	if (format[i] == t_arg[j] && c)
+{
+	printf(", ");
+		break;
+}
+j++;
+}
+	switch (format[i])
+{
+	case 'c':
+	printf("%c", va_arg(valist, int)), c = 1;
+		break;
+	case 'i':
+	printf("%d", va_arg(valist, int)), c = 1;
+		break;
+	case 'f':
+	printf("%f", va_arg(valist, double)), c = 1;
+		break;
+	case 's':
+str = va_arg(valist, char *), c = 1;
+	if (!str)
+{
+	printf("(nil)");
+		break;
+}
+	printf("%s", str);
+		break;
+}
+i++;
+}
 	printf("\n");
+	va_end(valist);
 }
